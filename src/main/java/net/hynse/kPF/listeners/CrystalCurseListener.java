@@ -32,10 +32,6 @@ public class CrystalCurseListener implements Listener {
         if (hasEnchantment(weapon)) {
             ThreadLocalRandom random = ThreadLocalRandom.current();
             
-            // Random damage multiplier between 1.1x and 1.5x
-            double multiplier = 1.1 + (random.nextDouble() * 0.4);
-            event.setDamage(event.getDamage() * multiplier);
-            
             // Crystal curse effects on hit with random variations
             Particle[] particles = {Particle.ENCHANT, Particle.PORTAL, Particle.END_ROD};
             player.getWorld().spawnParticle(
